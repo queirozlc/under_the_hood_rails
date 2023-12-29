@@ -42,7 +42,8 @@ class MembersController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_member
-    @member = Member.find(params[:id])
+    @member = Member.find_by(id: params[:id])
+    render json: { error: 'Member not found' }, status: :unprocessable_entity unless @member
   end
 
   # Only allow a list of trusted parameters through.
