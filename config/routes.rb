@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   scope "/api" do
     resources :members, except: [:new, :edit]
-    resources :posts, except: [:new, :edit]
+    resources :posts, except: [:new, :edit] do
+      resources :comments, except: [:new, :edit]
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
