@@ -4,5 +4,6 @@ class Member < ApplicationRecord
   validates_length_of :name, minimum: 3
   validates_format_of :email, with: /@/
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
 
