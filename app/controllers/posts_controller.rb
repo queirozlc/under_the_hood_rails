@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    render json: @posts
+    render json: @posts, include: { member: { only: %i[ name email ] } }, except: %i[ member_id ]
   end
 
   # GET /posts/1
