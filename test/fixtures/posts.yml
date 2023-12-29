@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  body: MyText
+post_one:
+  title: Hello, world!
+  body: That's my rails app!
+  member: john_doe
 
-two:
-  title: MyString
-  body: MyText
+post_two:
+  title: Ruby on Rails is awesome!
+  body: This is the body of the first post.
+  member: jane_doe
