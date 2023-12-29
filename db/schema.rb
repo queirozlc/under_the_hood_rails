@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_29_203420) do
   create_table "members", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
+    t.text "bio"
     t.string "avatar"
     t.string "github_url"
     t.string "website_url"
